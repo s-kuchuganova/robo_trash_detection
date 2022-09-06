@@ -9,6 +9,7 @@ while True:
     #чтобы закрыть открывшееся окно с вебкой нажми q
     if k==ord('q'):
         break
+    #efwgwrgew
 video.release()
 cv2.destroyAllWindows()
 
