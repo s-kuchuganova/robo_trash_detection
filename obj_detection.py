@@ -11,14 +11,16 @@ data = cv2.imread(imgs)
 data = cv2.resize(data, (224,224))
 # print((data.T).shape)
 # Inference
-data = torch.from_numpy(np.expand_dims(data.T,axis=0))
+data = torch.from_numpy(np.expand_dims(data.T, axis=0))
 
-print(data.shape)
-results = model(data)
+# print(data.shape)
+results = model(data.float())
 
-# Results
-results.print()
-results.save()  # or .show()
-
-results.xyxy[0]  # img1 predictions (tensor)
-results.pandas().xyxy[0]  # img1 predictions (pandas)
+# # Results
+# results.print()
+# results.save()  # or .show()
+# print(results)
+print(results.shape)
+#
+# results.xyxy[0]  # img1 predictions (tensor)
+# results.pandas().xyxy[0]  # img1 predictions (pandas)
